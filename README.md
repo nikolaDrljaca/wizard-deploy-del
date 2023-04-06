@@ -16,5 +16,14 @@ Open a terminal and run: `docker compose up -d`
 - `localhost:3000/home`: React application. 
 - `localhost:8081/`: Mongo Express driver, allows access to the database.
 
+## Testing
+The React app can be accessed as mentioned above. This build showcases functionality related to the ML Interface Wizard part of the project.
+
+So far, we have tested the application with two models with their accompanying `config.json`, `in_transformer.pkl.` and `out_transformer.pkl` files. Note that there is a disctintion between a models `config` and `metadata`. The `config` is used to generate the UI, while the metadata is saved on the backend to describe the model. This metadata is accessible from the backend application, refer to the `/docs`.
+
+Here is the link to the models we used for testing so far:
+[https://drive.google.com/drive/folders/1UdiVcG8DnMGcMooE5RqFBBIWO12pxfcd?usp=sharing](https://drive.google.com/drive/folders/1UdiVcG8DnMGcMooE5RqFBBIWO12pxfcd?usp=sharing)
+
+
 ## Note
 The script pulls images for the `del2` builds. As new builds are available, the script will be updated accordingly. 
