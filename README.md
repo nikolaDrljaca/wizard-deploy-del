@@ -4,8 +4,8 @@ This repo contains a `docker-compose.yml` file which can be used to deploy a `de
 Of course, the prerequisite for running the script is `Docker`.
 
 ## Reference Repos
-- [Frontend]("https://github.com/davutkulaksiz/ml-interface-wizard")
-- [Backend]("https://github.com/nikolaDrljaca/interface-wizard-backend")
+- [Frontend](https://github.com/davutkulaksiz/ml-interface-wizard)
+- [Backend](https://github.com/nikolaDrljaca/interface-wizard-backend)
 
 ## How to Run
 After cloning this repository, navigate to the root directory.
