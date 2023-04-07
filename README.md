@@ -27,3 +27,7 @@ Here is the link to the models we used for testing so far:
 
 ## Note
 The script pulls images for the `del2` builds. As new builds are available, the script will be updated accordingly. 
+
+## Existing Issues
+1. Sometimes refreshing the `frontend` application causes it to break and throw `404` errors. In this case it is sufficient to open a new tab and navigate to `localhost:3000/home`. This issue is being investigated. 
+
