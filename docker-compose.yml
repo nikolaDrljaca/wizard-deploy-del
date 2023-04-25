@@ -1,12 +1,12 @@
-name: ml-interface-wizard 
+name: ml-interface-wizard
 services:
   frontend:
     image: nikoladrljacaa/wizard-frontend:del2
     container_name: frontend
     ports:
-      - 3000:3000
-    depends_on: 
-      - backend  
+      - 80:3000
+    depends_on:
+      - backend
 
   backend:
     image: nikoladrljacaa/wizard-backend:del2
@@ -33,21 +33,19 @@ services:
       # named volumes
       - mongodb-volume:/data/db
       - mongoconfig:/data/configdb
-  
+
   mongo-express:
     image: mongo-express
     container_name: m-express
     ports:
       - 8081:8081
     environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: ${DB_USER} 
-      ME_CONFIG_MONGODB_ADMINPASSWORD: ${DB_PASS} 
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${DB_USER}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${DB_PASS}
       ME_CONFIG_MONGODB_URL: mongodb://${DB_USER}:${DB_PASS}@mongodb:${DB_PORT}
-    depends_on: 
+    depends_on:
       - mongodb
-  
 
 volumes:
   mongodb-volume:
   mongoconfig:
-
