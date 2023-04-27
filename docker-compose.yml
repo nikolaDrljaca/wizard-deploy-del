@@ -1,15 +1,15 @@
 name: ml-interface-wizard
 services:
   frontend:
-    image: nikoladrljacaa/wizard-frontend:del2
+    image: nikoladrljacaa/wizard-frontend:del3
     container_name: frontend
     ports:
-      - 80:3000
+      - 3000:80
     depends_on:
       - backend
 
   backend:
-    image: nikoladrljacaa/wizard-backend:del2
+    image: nikoladrljacaa/wizard-backend:del3
     container_name: backend
     ports:
       - 8000:8000
