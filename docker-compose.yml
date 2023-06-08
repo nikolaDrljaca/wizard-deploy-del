@@ -1,15 +1,7 @@
 name: ml-interface-wizard
 services:
-  frontend:
-    image: nikoladrljacaa/wizard-frontend:del3
-    container_name: frontend
-    ports:
-      - 3000:80
-    depends_on:
-      - backend
-
   backend:
-    image: nikoladrljacaa/wizard-backend:del3
+    image: nikoladrljacaa/wizard-backend:main
     container_name: backend
     ports:
       - 8000:8000
@@ -45,6 +37,7 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://${DB_USER}:${DB_PASS}@mongodb:${DB_PORT}
     depends_on:
       - mongodb
+    restart: unless-stopped
 
 volumes:
   mongodb-volume:
